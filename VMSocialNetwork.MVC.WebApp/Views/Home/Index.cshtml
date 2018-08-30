@@ -1,0 +1,106 @@
+﻿@{
+    ViewBag.Title = "Home";
+}
+
+<div class="col-md-12">
+    <div class="card  card-tasks">
+        <div class="card-header ">
+            <h4 class="card-title">
+                <i class="nc-icon nc-circle-09 "></i> DEMO TEMPLATE
+            </h4>
+            <p class="card-category">
+                Timeline - recent news
+            </p>
+        </div>
+        <div class="card-body ">
+            <div class="table-full-width">
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <td class="col-md-8">
+                                <a href="https://demos.creative-tim.com/light-bootstrap-dashboard/examples/dashboard.html?_ga=2.181292519.1160191608.1535583462-642310891.1535583462" target="_blank">Demo Creative-tim</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="card-footer">
+            <hr>
+            <div class="stats">
+                <a class="btn btn-sm btn-outline-secondary" href="~/Notification/">
+                    <i class="nc-icon nc-tap-01"></i> Like
+                </a>
+                <a class="btn btn-sm btn-outline-secondary" href="~/Notification/">
+                    <i class="nc-icon nc-chat-round"></i> Comments
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="card  card-tasks">
+        <div class="card-header ">
+            <h4 class="card-title">
+                <i class="nc-icon nc-circle-09 "></i>  DOWNLOAD TEMPLATE ASP.NET MVC 5
+            </h4>
+            <p class="card-category">
+                Timeline - recent news
+            </p>
+        </div>
+        <div class="card-body ">
+            <div class="table-full-width">
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <td class="col-md-8">
+                                <a href="https://drive.google.com/drive/folders/17NNp4LIPA9eVTDPNQ3HcyW6VdPQUjKkp?usp=sharing" target="_blank">Download Template MVC 5</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="card-footer">
+            <hr>
+            <div class="stats">
+                <a class="btn btn-sm btn-outline-secondary" href="~/Notification/">
+                    <i class="nc-icon nc-tap-01"></i> Like
+                </a>
+                <a class="btn btn-sm btn-outline-secondary" href="~/Notification/">
+                    <i class="nc-icon nc-chat-round"></i> Comments
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+@{
+    var ipUser = ViewBag.IpUser
+        .Replace("\\", "\\\\")
+        .Replace("'", "\\'");
+}
+  
+
+
+@section scripts {
+    <script>
+        toastr.options = {
+            "closeButton": true,
+            "debug": false,
+            "newestOnTop": false,
+            "progressBar": true,
+            "positionClass": "toast-top-center",
+            "preventDuplicates": false,
+            "onclick": null,
+            "showDuration": "300",
+            "hideDuration": "500",
+            "timeOut": "5000",
+            "extendedTimeOut": "1000",
+            "showEasing": "swing",
+            "showMethod": "fadeIn",
+            "hideMethod": "fadeOut"
+        }
+        var ipUser = '@(ipUser)';
+        toastr.info(`Seu IP é ${ipUser}`)
+
+    </script>
+}
