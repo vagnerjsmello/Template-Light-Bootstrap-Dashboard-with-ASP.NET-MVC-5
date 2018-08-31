@@ -5,25 +5,25 @@
 <div class="sidebar" data-color="blue">
     <div class="sidebar-wrapper">
         <div class="logo">
-            <a href="~/Home/Index" class="simple-text">
+            <a href="@Url.Action("Index", "Home")" class="simple-text">
                 VM Social NetWork
             </a>
         </div>
         <ul class="nav">
             <li>
-                <a class="nav-link active" href="~/Profile/">
+                <a class="nav-link active" href="@Url.Action("Index", "Profile")">
                     <i class="nc-icon nc-circle-09"></i>
                     <p>Profile</p>
                 </a>
             </li>
             <li>
-                <a class="nav-link" href="~/Notification/">
+                <a class="nav-link" href="@Url.Action("Index", "Feed")">
                     <i class="nc-icon nc-bullet-list-67"></i>
                     <p>News feed</p>
                 </a>
             </li>
             <li class="nav-item active active-pro">
-                <a class="nav-link active" href="~/Configuration/">
+                <a class="nav-link active" href="@Url.Action("Index", "Configuration")">
                     <i class="nc-icon nc-settings-gear-64"></i>
                     <p>Configuration</p>
                 </a>
